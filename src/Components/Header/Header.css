@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(20, 20, 20); /* fallback */
+  /* background-color: rgb(20, 20, 20); fallback */
   background-color: transparent;
   height: 10vh;
   color: white;
