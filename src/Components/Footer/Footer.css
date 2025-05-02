@@ -32,15 +32,14 @@
 }
 
 .service_code{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: #fff 1px solid;
-    width: 10%;
+    cursor: pointer; 
     margin: 10px 0;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 13%;
 }
-.copy-write{
+.copy_write{
     font-size: 12px;
     margin-bottom: 10px;
 }
