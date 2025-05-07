@@ -1,1 +1,27 @@
+"homepage": "https://your-username.github.io/Netflix2024Clone"...... at the top of package.json
+
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
+
+base: '/Netflix-clone-2024/' .... in vite.comfig.js
+
+
 npm install gh-pages --save-dev
+npm install movie-trailer
+
+
+____________repeat the below 2 when ever you need to edit________
+
+npm run build
+
+npm run deploy
+
+
+..................my additional...........
+ npm i react-router

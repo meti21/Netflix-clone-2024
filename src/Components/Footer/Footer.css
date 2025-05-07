@@ -1,25 +1,38 @@
-.footer_outer_container{
+/* Outer container for the footer */
+.footer_outer_container {
     background-color: #111;
     color: grey;
-    display:flex;
+    display: flex;
     justify-content: center;
+    padding: 20px 0; /* Add some padding for spacing */
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
 }
-.footer_inner_container{
-    width: 60%;
+
+/* Inner container for centering and width control */
+.footer_inner_container {
+    width: 80%; /* Adjusted to 80% to make it a little more flexible */
+    max-width: 1200px; /* Max width for large screens */
 }
-.footer_icons{
+
+/* Icons container (like social media, Netflix-related icons) */
+.footer_icons {
     width: 12%;
     display: flex;
     justify-content: space-between;
-    margin-left: 10px;
     color: #fff;
-}
-.footer_data{
-    display: flex;
-    justify-content: space-between;
+    margin-left: 10px;
 }
 
-.footer_data ul{
+/* Data section with multiple columns */
+.footer_data {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow data to wrap on smaller screens */
+    margin-top: 10px;
+}
+
+/* Each list within footer data */
+.footer_data ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -27,19 +40,58 @@
     height: 12vh;
 }
 
-.footer_data ul li{
+/* Styling for list items (make them clickable) */
+.footer_data ul li {
     cursor: pointer;
+    margin-bottom: 10px; /* Added spacing between items */
+    color: #fff; /* Ensure text is white */
+    font-size: 14px; /* Adjusted font size for consistency */
 }
 
-.service_code{
+/* Service code section (like Netflix service code or info) */
+.service_code {
     cursor: pointer; 
     margin: 10px 0;
     justify-content: center;
     align-items: center;
     display: flex;
     width: 13%;
+    color: #fff;
+    font-size: 14px; /* Adjusted font size */
 }
-.copy_write{
+
+/* Copyright section */
+.copy_write {
     font-size: 12px;
     margin-bottom: 10px;
+    color: #aaa; /* Slightly lighter text for the copyright */
+    text-align: center; /* Center the copyright text */
+    width: 100%;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer_icons {
+        width: 100%;
+        justify-content: space-around; /* Stack icons horizontally */
+    }
+
+    .footer_data {
+        flex-direction: column;
+        align-items: center; /* Center data sections on smaller screens */
+    }
+
+    .footer_data ul {
+        height: auto; /* Allow height to be adjusted based on content */
+    }
+
+    .service_code {
+        width: 100%; /* Make the service code section more flexible */
+        justify-content: center;
+    }
+
+    .footer_inner_container {
+        width: 90%; /* Make the footer container more flexible on small screens */
+    }
+}
+
