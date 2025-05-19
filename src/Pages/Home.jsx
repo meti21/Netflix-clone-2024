@@ -11,7 +11,7 @@ function Home() {
         <Header/>
         <Banner/>
         <RowList/>
-        <Row/>
+        {/* <Row/> */}
         <Footer/>
     </>
   )

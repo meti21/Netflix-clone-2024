@@ -1,80 +1,87 @@
-/* Header Container */
-.header_outer_container {
+
+/* Base Header Style */
+.navbar {
   position: sticky;
   top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: rgb(20, 20, 20); fallback */
-  background-color: transparent;
-  height: 10vh;
-  color: white;
-  transition: all 0.5s ease-in;
-  z-index: 1;
+  z-index: 10;
+  transition: background-color 0.4s ease;
+  padding: 0.6rem 1rem;
+  background-color: transparent !important;
 }
 
-/* Inner Header Layout */
-.header-container {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* When user scrolls down - add black background */
+/* .navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.85) !important;
+} */
+
+/* Logo */
+.navbar-brand img {
+  width: 100px;
+  transition: width 0.3s ease;
 }
 
-/* Header Left: Logo + Navigation */
-.header_left ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-.header_left li {
+/* Navigation links */
+.navbar-nav .nav-link {
+  color: #fff;
   font-size: 14px;
-  cursor: pointer;
   transition: color 0.3s ease;
+  padding: 0.5rem;
 }
 
-.header_left li:hover {
-  color: #b3b3b3;
+.navbar-nav .nav-link:hover {
+  color: #D81E27;
 }
 
-/* Netflix logo */
-.header_left img {
-  margin-right: 10px;
+/* Icons */
+.navbar-nav .nav-link svg {
+  font-size: 1.3rem;
+  vertical-align: middle;
 }
 
-/* Header Right: Icons */
-.header_right ul {
-  display: flex;
-  list-style: none;
-  gap: 15px;
-  align-items: center;
-  padding: 0;
-  margin: 0;
+/* Dropdown */
+#account-dropdown .dropdown-menu {
+  background-color: #141414;
+  border: none;
 }
 
-.header_right li {
-  cursor: pointer;
-  transition: transform 0.3s ease, color 0.3s ease;
+#account-dropdown .dropdown-item {
+  color: #fff;
+  font-size: 14px;
 }
 
-.header_right li:hover {
-  transform: scale(1.1);
-  color: #e5e5e5;
+#account-dropdown .dropdown-item:hover {
+  background-color: #D81E27;
+  color: #fff;
 }
 
-/* Optional: Responsive Adjustments */
+/* Responsive: Phones and small tablets */
 @media (max-width: 768px) {
-  .header_left ul {
-    gap: 10px;
-    font-size: 12px;
-    flex-wrap: wrap;
+  .navbar-brand img {
+    width: 80px;
   }
 
-  .header_right ul {
-    gap: 10px;
+  .navbar-nav .nav-link {
+    font-size: 13px;
+    padding: 0.4rem;
+  }
+
+  .navbar-nav .nav-link svg {
+    font-size: 1.1rem;
   }
 }
+
+/* Extra small devices (optional) */
+@media (max-width: 576px) {
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 12px;
+  }
+
+  #account-dropdown .dropdown-item {
+    font-size: 13px;
+  }
+}
+

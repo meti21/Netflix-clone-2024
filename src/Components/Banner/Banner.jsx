@@ -5,6 +5,7 @@ import './Banner.css'
 
 function Banner() {
   const [movie, setMovie] = useState({});
+  
 
   useEffect(() => {
     (async () => {
@@ -12,7 +13,7 @@ function Banner() {
         const request = await myAxios.get(myRequests.fetchNetflixOriginals);
         // console.log(request);
 
-        //to randomly select one of the images out of the 20 results(this also gave us a    new image after refresh)
+        //to randomly select one of the images out of the 20 results(this also gave us a  new image after refresh)
         //Math.random() random number from 0 to 1
         setMovie(
           request.data.results[
@@ -25,10 +26,11 @@ function Banner() {
     })();
   }, []);
 
-  console.log(movie)
+  // console.log(movie)
 
     function truncate(str, n) {
       return str?.length > n ? str.substr(0, n) + "....." : str;
+      //using substr is legacy,use slice is modern
     }
 
 
@@ -66,7 +68,7 @@ function Banner() {
         <p>{movie?.first_air_date}</p>
       </div>
 
-      <div className="banner__fadeBotton" />
+      <div className="banner__fadeBottom" />
     </header>
   );
 }

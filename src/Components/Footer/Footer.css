@@ -87,11 +87,11 @@
       flex-direction: column;
       align-items: center;
     }
-  
+/*   
     .footer_data ul {
-      /* align-items: center; */
-      /* padding: 0; */
-    }
+      align-items: center; */
+      /* padding: 0;
+    } */
   
     .footer_data ul li {
       text-align: center;

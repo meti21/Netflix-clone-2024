@@ -13,7 +13,7 @@ function Header() {
       expand="md"
       bg="dark"
       variant="dark"
-      className="px-3"
+      className="px-3 "
     >
       <Container fluid>
         {/* Logo */}
@@ -26,32 +26,34 @@ function Header() {
 
         {/* Collapsible content */}
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* Left Navigation */}
-          <Nav className="me-auto gap-3">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#tvshows">TV Shows</Nav.Link>
-            <Nav.Link href="#movies">Movies</Nav.Link>
-            <Nav.Link href="#latest">Latest</Nav.Link>
-            <Nav.Link href="#mylist">My List</Nav.Link>
-            <Nav.Link href="#languages">Browse by Languages</Nav.Link>
-          </Nav>
+          <div className="d-flex justify-content-between w-100 align-items-center">
+            {/* Left Navigation */}
+            <Nav className="me-auto gap-3">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#tvshows">TV Shows</Nav.Link>
+              <Nav.Link href="#movies">Movies</Nav.Link>
+              <Nav.Link href="#latest">Latest</Nav.Link>
+              <Nav.Link href="#mylist">My List</Nav.Link>
+              <Nav.Link href="#languages">Browse by Languages</Nav.Link>
+            </Nav>
 
-          {/* Right Icons */}
-          <Nav className="gap-3 align-items-center">
-            <Nav.Link href="#search">
-              <SearchIcon />
-            </Nav.Link>
-            <Nav.Link href="#notifications">
-              <NotificationsNoneIcon />
-            </Nav.Link>
-            <Nav.Link href="#account">
-              <AccountBoxIcon />
-            </Nav.Link>
-            <NavDropdown id="account-dropdown" align="end">
-              <NavDropdown.Item href="#profile">Sign In</NavDropdown.Item>
-              <NavDropdown.Item href="#logout">Register</NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
+            {/* Right Icons */}
+            <Nav className="gap-3 align-items-center">
+              <Nav.Link href="#search">
+                <SearchIcon />
+              </Nav.Link>
+              <Nav.Link href="#notifications">
+                <NotificationsNoneIcon />
+              </Nav.Link>
+              <Nav.Link href="#account">
+                <AccountBoxIcon />
+              </Nav.Link>
+              <NavDropdown id="account-dropdown" align="end">
+                <NavDropdown.Item href="#profile">Sign In</NavDropdown.Item>
+                <NavDropdown.Item href="#logout">Register</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
