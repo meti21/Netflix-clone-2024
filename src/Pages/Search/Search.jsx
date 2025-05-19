@@ -17,7 +17,7 @@ function Search() {
                     placeholder="Search"
                     className="me-2"
                   />
-                  <Button type="submit" variant='danger'>Submit</Button>
+                  <Button type="submit" style={{ backgroundColor: '#D81E27'}}>Submit</Button>
                 </Form>
               </Navbar>
             </div>

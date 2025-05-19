@@ -18,7 +18,7 @@ function Header() {
     >
       <Container fluid>
         {/* Logo */}
-        <Navbar.Brand as={Link}  to="/">
+        <Navbar.Brand as={Link} to="/">
           <img src={NetflixLogo} alt="Netflix Logo" width="100" />
         </Navbar.Brand>
 
@@ -48,12 +48,16 @@ function Header() {
               <Nav.Link href="#notifications">
                 <NotificationsNoneIcon />
               </Nav.Link>
-              <Nav.Link href="#account">
+              <Nav.Link as={Link} to="/auth">
                 <AccountBoxIcon />
               </Nav.Link>
               <NavDropdown id="account-dropdown" align="end">
-                <NavDropdown.Item href="#profile">Sign In</NavDropdown.Item>
-                <NavDropdown.Item href="#logout">Register</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/auth?mode=signin">
+                  Sign In
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/auth?mode=register">
+                 Register
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </div>
