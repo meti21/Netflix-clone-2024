@@ -17,6 +17,7 @@ function Header() {
       className="px-3 "
     >
       <Container fluid>
+
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
           <img src={NetflixLogo} alt="Netflix Logo" width="100" />
@@ -28,6 +29,7 @@ function Header() {
         {/* Collapsible content */}
         <Navbar.Collapse id="responsive-navbar-nav">
           <div className="d-flex justify-content-between w-100 align-items-center">
+            
             {/* Left Navigation */}
             <Nav className="me-auto gap-3">
               <Nav.Link as={Link} to="/">

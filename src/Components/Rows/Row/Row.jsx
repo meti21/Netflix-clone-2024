@@ -4,7 +4,8 @@ import axios from "../../../utils/axios";
 import movieTrailer from "movie-trailer";
 
 
-function Row({ title, fetchUrl, isLargeRow, trailerUrl, setTrailerUrl }) {
+function Row({ title, fetchUrl, isLargeRow, trailerUrl, setTrailerUrl}) {
+
   const [movies, setMovie] = useState([]);
 
   //base_url to get the poster of the movies(you can get this from the documentation)....base_url + poster path(smaller image than the movie banner)

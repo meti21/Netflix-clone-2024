@@ -50,7 +50,7 @@ margin-bottom: 40px; /* Added vertical spacing between categories */
   filter: blur(4px);
 }
 
-.trailer-overlay {
+/* .trailer-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@ margin-bottom: 40px; /* Added vertical spacing between categories */
   height: 100%;
   background: transparent;
   z-index: 999;
-}
+} */
 
 .trailer-popup {
   position: fixed;

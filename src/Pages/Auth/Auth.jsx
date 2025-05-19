@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function Auth() {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -44,21 +44,19 @@ function Auth() {
           <button type="submit" style={buttonStyle}>
             Sign In
           </button>
-          <p style={{ textAlign: "center", marginTop: "15px" }}>
-            Don't have an account?{" "}
-            <button
-              type="button"
-              onClick={() => setIsSignIn(false)}
-              style={{
-                color: "red",
-                background: "none",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Register
-            </button>
-          </p>
+
+          <button
+            type="button"
+            onClick={() => setIsSignIn(false)}
+            style={{
+              color: "red",
+              background: "none",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Don't have an account?
+          </button>
         </form>
       ) : (
         <form>
@@ -83,8 +81,6 @@ function Auth() {
           <button type="submit" style={buttonStyle}>
             Sign Up
           </button>
-          <p style={{ textAlign: "center", marginTop: "15px" }}>
-            Already have an account?{" "}
             <button
               type="button"
               onClick={() => setIsSignIn(true)}
@@ -95,9 +91,9 @@ function Auth() {
                 cursor: "pointer",
               }}
             >
-              Sign In
+              Already have an account?
             </button>
-          </p>
+        
         </form>
       )}
     </div>
