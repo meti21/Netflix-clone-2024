@@ -1,55 +1,61 @@
-import React from 'react'
 import NetflixLogo from "../../assets/images/Netflix_logo.svg";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 
-import "./Header.css"
-
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import "./Header.css";
 
 function Header() {
   return (
-    <div className="header_outer_container">
-      <div className="header-container">
-        <div className="header_left">
-          <ul>
-            <li>
-              <img src={NetflixLogo} alt="Netflix logo" width="100" />
-            </li>
-            <li>Home</li>
-            <li>Tv Shows</li>
-            <li>Movies</li>
-            <li>Latest</li>
-            <li>My List</li>
-            <li>Browse by Languages</li>
-          </ul>
-        </div>
+    <Navbar
+      collapseOnSelect
+      expand="md"
+      bg="dark"
+      variant="dark"
+      className="px-3"
+    >
+      <Container fluid>
+        {/* Logo */}
+        <Navbar.Brand href="#home">
+          <img src={NetflixLogo} alt="Netflix Logo" width="100" />
+        </Navbar.Brand>
 
-        <div className="header_right">
-          <ul>
-            <li><SearchIcon/></li>
-            <li><NotificationsNoneIcon/></li>
-            <li><AccountBoxIcon/></li>
-            <li><ArrowDropDownIcon/></li>
-          </ul>
-        </div>
-      </div>
-    </div>
+        {/* Hamburger toggle */}
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+        {/* Collapsible content */}
+        <Navbar.Collapse id="responsive-navbar-nav">
+          {/* Left Navigation */}
+          <Nav className="me-auto gap-3">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#tvshows">TV Shows</Nav.Link>
+            <Nav.Link href="#movies">Movies</Nav.Link>
+            <Nav.Link href="#latest">Latest</Nav.Link>
+            <Nav.Link href="#mylist">My List</Nav.Link>
+            <Nav.Link href="#languages">Browse by Languages</Nav.Link>
+          </Nav>
+
+          {/* Right Icons */}
+          <Nav className="gap-3 align-items-center">
+            <Nav.Link href="#search">
+              <SearchIcon />
+            </Nav.Link>
+            <Nav.Link href="#notifications">
+              <NotificationsNoneIcon />
+            </Nav.Link>
+            <Nav.Link href="#account">
+              <AccountBoxIcon />
+            </Nav.Link>
+            <NavDropdown id="account-dropdown" align="end">
+              <NavDropdown.Item href="#profile">Sign In</NavDropdown.Item>
+              <NavDropdown.Item href="#logout">Register</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default Header
-
-//  <Navbar bg="light" data-bs-theme="light" sticky="top" >
-//         <Container>
-//           <Nav className="me-auto">
-//             <Nav.Link href="#home">Tv Shows</Nav.Link>
-//             <Nav.Link href="#home">Tv Shows</Nav.Link>
-//             <Nav.Link href="#features">Movies</Nav.Link>
-//             <Nav.Link href="#pricing">Latest</Nav.Link>
-//             <Nav.Link href="#pricing">My List</Nav.Link>
-//             <Nav.Link href="#pricing">Browse by Languages</Nav.Link>
-//           </Nav>
-//         </Container>
-//       </Navbar>
+export default Header;
