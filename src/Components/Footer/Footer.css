@@ -40,6 +40,11 @@
     height: 12vh;
 }
 
+.footer_inner_container li:hover,
+.footer_inner_container p:hover{
+  color: #D81E27;
+}
+
 /* Styling for list items (make them clickable) */
 .footer_data ul li {
     cursor: pointer;
@@ -70,28 +75,36 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
     .footer_icons {
-        width: 100%;
-        justify-content: space-around; /* Stack icons horizontally */
+      width: 100%;
+      justify-content: center; /* Center icons */
+      gap: 1rem; /* Add space between icons */
+      margin-bottom: 1rem;
     }
-
+  
     .footer_data {
-        flex-direction: column;
-        align-items: center; /* Center data sections on smaller screens */
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .footer_data ul {
-        height: auto; /* Allow height to be adjusted based on content */
+      /* align-items: center; */
+      /* padding: 0; */
     }
-
+  
+    .footer_data ul li {
+      text-align: center;
+    }
+  
     .service_code {
-        width: 100%; /* Make the service code section more flexible */
-        justify-content: center;
+      /* width: auto; */
+      margin: 1rem auto;
     }
-
+  
     .footer_inner_container {
-        width: 90%; /* Make the footer container more flexible on small screens */
+      width: 90%;
     }
-}
+  }
+  
 
