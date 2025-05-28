@@ -51,7 +51,7 @@ npm install
 npm start
 
 # 🌐 Deployment
-This project is deployed using [Vercel]. To deploy:
+This project is deployed using [github]. To deploy:
 npm run deploy
 
 # 📌 Credits

@@ -45,19 +45,24 @@ function Row({ title, fetchUrl, isLargeRow, trailerUrl, setTrailerUrl}) {
 
         <div className="row__posters">
           {movies?.map((movie, i) => {
-            //() here after img is used just for readability not return
-            let img = (
+            const imagePath = isLargeRow
+              ? movie.poster_path
+              : movie.backdrop_path;
+
+            // preventing broken image icons from appearing in the UI.
+            if (!imagePath) return null;
+
+            return (
               <img
                 onClick={() => handelClick(movie)}
                 key={i}
                 className={`row__poster ${isLargeRow && "row__posterLarge"}`}
-                src={`${base_url}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
+                src={`${base_url}${imagePath}`}
+                alt={movie.title || movie.original_name || "Movie Poster"}
               />
             );
-            return img;
           })}
+
         </div>
       </div>
     </>
